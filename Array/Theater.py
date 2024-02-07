@@ -1,4 +1,5 @@
 # Creating gradebook for students
+from colorama import Fore
 
 gradebook = [
     ["Aditi", 91, 98, 90],
@@ -20,8 +21,9 @@ def calculateAverage(studentName):
         if i[0] == studentName:
             grades = i[1:]
             average = sum(grades) / len(grades)
-            print(average)
-    return -1
+            print(Fore.GREEN + f"The average grade of {name} is {average}")
+            return
+    print(Fore.RED + f"Record not found!")
 
 
 print("----- Gradebook for Pdeu Students -----")
@@ -29,9 +31,4 @@ printGradeBook(gradebook)
 
 print("Enter the student name: ")
 name = input()
-avg = calculateAverage(name)
-
-if avg != -1:
-    print(f"The average grade of {name} is {avg}")
-else:
-    print(f"Record not found!")
+calculateAverage(name)

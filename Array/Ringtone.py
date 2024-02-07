@@ -1,6 +1,5 @@
 from colorama import Fore
 from playsound import playsound
-import time
 from plyer import notification
 
 
