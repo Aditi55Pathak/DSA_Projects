@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Printer queue simulation in Python
 
 import time
@@ -74,4 +74,4 @@ def main():
 
 if __name__ == "__main__":
     main()
->>>>>>> c0e6d4bc4a5a9adf3f13f4b412f8f135dbd68ddd
+
