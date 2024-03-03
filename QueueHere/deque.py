@@ -28,3 +28,31 @@ class Bookshelf:
         print("Total book in self : ")
         for books in self.bookshelf:
             print(books)
+
+# I am creating here a bookself
+            
+bookshelf=Bookshelf()
+
+# Adding books from left
+
+bookshelf.appendbookleft("Java")
+bookshelf.appendbookleft("C++")
+bookshelf.appendbookleft("Ruby")
+
+bookshelf.displayBook()
+
+# Adding books from right
+
+bookshelf.appendbookright("Python")
+bookshelf.appendbookright("Scipy")
+bookshelf.appendbookright("AI")
+    
+bookshelf.displayBook()
+
+# Removing books from left and right
+
+bookshelf.removebookleft()
+bookshelf.removebookright()
+
+bookshelf.displayBook()
+
