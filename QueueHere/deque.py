@@ -13,10 +13,18 @@ class Bookshelf:
         self.bookshelf.append(book)
 
     def removebookleft(self):
-        if len(self.bookshelf)>0:
+        if len(self.bookshelf) > 0:
             self.bookshelf.popleft()
         else:
             return None
         
     def removebookright(self):
-        pass
+        if len(self.bookshelf) > 0:
+            self.bookshelf.pop()
+        else:
+            return None
+        
+    def displayBook(self):
+        print("Total book in self : ")
+        for books in self.bookshelf:
+            print(books)
