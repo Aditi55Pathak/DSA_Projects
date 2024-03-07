@@ -6,27 +6,41 @@
 
 class Stack:
     def __init__(self):
-        self.stack=[]
-    
-    def push(self,item):
+        self.stack = []
+
+    def push(self, item):
         self.stack.append(item)
 
     def pop(self):
-        if not self.isEmpty():
+        if not self.is_empty():
             return self.stack.pop()
         else:
             return None
-        
-    
-stack=Stack
 
+    def is_empty(self):
+        return len(self.stack) == 0
+
+# Initialize an empty stack
+stack = Stack()
+
+# Function to add an application to the stack
 def open_application(app_name):
     stack.push(app_name)
-    print(f"You opened the app {app_name}")
-            
+    print(f"{app_name} opened. Stack: {stack.stack}")
 
+# Function to remove an application from the stack
+def go_back():
+    app_name = stack.pop()
+    if app_name:
+        print(f"{app_name} closed. Stack: {stack.stack}")
+    else:
+        print("Stack is empty.")
 
+open_application("App1")
+open_application("App2")
+open_application("App3")
 
-        
-        
-    
+go_back()  # Removes "App3" from the stack
+go_back()  # Removes "App2" from the stack
+go_back()  # Removes "App1" from the stack
+go_back()  # Stack is empty
