@@ -10,4 +10,23 @@ class Stack:
     
     def push(self,item):
         self.stack.append(item)
+
+    def pop(self):
+        if not self.isEmpty():
+            return self.stack.pop()
+        else:
+            return None
+        
+    
+stack=Stack
+
+def open_application(app_name):
+    stack.push(app_name)
+    print(f"You opened the app {app_name}")
+            
+
+
+
+        
+        
     
